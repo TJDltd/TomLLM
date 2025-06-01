@@ -8,4 +8,4 @@ router = fastapi.APIRouter()
 
 @router.post("/query")
 def query(input_query: InputQuery) -> str:
-    return call_llm.call_llm(input_query.query, model="gemini-2.0-flash")
+    return call_llm.call_llm(input_query.query, call_llm.create_agent())

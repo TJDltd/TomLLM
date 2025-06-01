@@ -1,8 +1,18 @@
 from config import Config
 
-from google import genai
+from pydantic_ai import Agent
+from pydantic_ai.models.gemini import GeminiModel
+from pydantic_ai.providers.google_gla import GoogleGLAProvider
 
-client = genai.Client(api_key=Config.GOOGLE_API_KEY)
+model = GeminiModel(
+    'gemini-2.0-flash', provider=GoogleGLAProvider(api_key=Config.GEMINI_API_KEY)
+)
 
-def call_llm(prompt: str, model: str = "gemini-2.0-flash") -> str:
-    return client.models.generate_content(model=model, contents=prompt).text
+def create_agent():
+    return Agent(
+        system_prompt='Be concise, reply with one sentence.',
+        model=model,
+    )
+
+def call_llm(prompt: str, agent: Agent) -> str:
+    return agent.run_sync(prompt).output
