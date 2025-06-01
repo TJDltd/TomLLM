@@ -1,0 +1,11 @@
+import fastapi
+
+import call_llm
+from models import InputQuery
+
+router = fastapi.APIRouter()
+
+
+@router.post("/query")
+def query(input_query: InputQuery) -> str:
+    return call_llm.call_llm(input_query.query, model="gemini-2.0-flash")
