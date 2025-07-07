@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Host</title>
+</head>
+<body>
+    <h1>Custom LLM Host</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="prompt">Enter your prompt:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50">{{ prompt }}</textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if response %}
+        <h2>LLM Response:</h2>
+        <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;">{{ response }}</div>
+    {% endif %}
+</body>
+</html>
