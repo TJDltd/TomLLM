@@ -1,9 +1,13 @@
+"""Main test file for the TomLLM application."""
+
 from fastapi.testclient import TestClient
+
 from src.api import router
 from src.models import InputQuery
 
 
 def test_query():
+    """Qualitative test for LLM response."""
     client = TestClient(router)
 
     # Create a sample input query
