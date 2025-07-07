@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 from src.api import router
 from src.models import InputQuery
 
+
 def test_query():
     client = TestClient(router)
 
@@ -18,4 +19,6 @@ def test_query():
     assert isinstance(response.json(), str)
 
     # Optionally, you can check if the response contains expected content
-    assert "Paris" in response.json() or "France" in response.json(), "Response should contain the capital of France"
+    assert "Paris" in response.json() or "France" in response.json(), (
+        "Response should contain the capital of France"
+    )
