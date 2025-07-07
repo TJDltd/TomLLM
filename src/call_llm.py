@@ -1,4 +1,4 @@
-from config import Config
+from src.config import Config
 
 from pydantic_ai import Agent
 from pydantic_ai.models.gemini import GeminiModel

@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
-from api import router
-from models import InputQuery
+from src.api import router
+from src.models import InputQuery
 
 def test_query():
     client = TestClient(router)

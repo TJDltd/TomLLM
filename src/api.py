@@ -1,7 +1,7 @@
 import fastapi
 
 import call_llm
-from models import InputQuery
+from src.models import InputQuery
 
 router = fastapi.APIRouter()
 
