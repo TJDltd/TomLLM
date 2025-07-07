@@ -1,3 +1,4 @@
+django
 fastapi
 google-genai
 pydantic
