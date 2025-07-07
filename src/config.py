@@ -1,2 +1,2 @@
 class Config:
-    GEMINI_API_KEY = "..."
+    GEMINI_API_KEY = "AIzaSyBIyImJorYHJCNwA4Wv0TOIThPXcNpF1Uc"
