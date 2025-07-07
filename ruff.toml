@@ -1,0 +1,19 @@
+# Ruff configuration for TomLLM project
+line-length = 100
+select = ["E", "F", "W", "I", "N", "D", "UP", "B", "C4", "SIM", "TID", "ARG", "PL", "RUF"]
+ignore = ["E501"]  # Ignore line length errors (handled by line-length)
+exclude = [
+    "__pycache__",
+    ".git",
+    ".venv",
+    "env",
+    "venv",
+    "migrations",
+]
+target-version = "py311"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

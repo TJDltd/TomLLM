@@ -1,0 +1,33 @@
+Tom Davey
+London, UK | 07824 313412 | tomjackdavey@hotmail.com
+
+Professional Summary
+Lead Backend Engineer with 5 years of professional experience in Python, GitOps, and building AI-driven applications. Proven track record of architecting, deploying, and maintaining scalable containerised backend systems in enterprise and regulated environments. I have strong experience in Python, CICD (GitLab pipelines), Docker, Kubernetes, Azure, AWS, DataDog, OTEL, FastAPI. I am a proponent of writing simple, clean code, standardisation of code style, and small incremental changes.
+
+Current Employment
+Lead Backend Engineer
+London Stock Exchange Group (LSEG)
+October 2021 – Present
+Led the end-to-end delivery of an AI chatbot application from prototype to production, ensuring reliability, scalability, and security in a regulated environment.
+Utilized latest LLM techniques such as RAG (Retrieval-Augmented Generation) and NL2API (natural language to API request) designs to deliver advanced conversational AI features.
+Architected and implemented build and deployment pipelines using GitOps best practices.
+Developed a live speech processing solution for on-the-fly speech-to-text using latest speech recognition models.
+Implemented production grade observability to allow end-to-end tracing, API monitors, metric dashboards, and incident reporting.
+
+Education
+University of Edinburgh
+First Class Honours, BSc Artificial Intelligence & Computer Science (2016 – 2020)
+
+
+
+Previous Employment
+Data Engineer
+Quorate Technology
+October 2020 – September 2021
+Developed automatic speech processing solutions for clients.
+Implemented data cleaning and normalisation pipelines for ingesting training data.
+Built bespoke post-processing pipelines for automatically transcribed documents.
+Data Scientist (Internship)
+Actelligent Group
+Summer 2020
+Applied machine learning techniques to analyse and predict market investment patterns.
