@@ -2,7 +2,8 @@
 Personal project of an end-to-end LLM powered tool
 
 TODO:
-- Dockerise backend
+- Dockerise backend - tick
 - Create a frontend - tick
 - Expand backend to answer questions about me - tick
 - Hosting options
+- Add prompt info about TomLLM solution
