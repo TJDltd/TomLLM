@@ -1,4 +1,5 @@
 """Data models for the TomLLM application."""
+
 import pydantic
 
 

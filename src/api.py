@@ -1,4 +1,5 @@
 """FastAPI router for handling LLM queries."""
+
 import fastapi
 
 import call_llm

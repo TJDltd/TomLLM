@@ -1,3 +1,5 @@
+"""LLM call logic for TomLLM project."""
+
 import os
 
 from pydantic_ai import Agent
@@ -14,6 +16,7 @@ model = GeminiModel("gemini-2.0-flash", provider=GoogleGLAProvider(api_key=Confi
 
 
 def _load_prompt() -> str:
+    """Load the system prompt and CV content for the LLM."""
     with open(CV_FILE_PATH) as file:
         cv_content = file.read()
 
@@ -21,6 +24,7 @@ def _load_prompt() -> str:
 
 
 def create_agent() -> Agent:
+    """Create an Agent instance with the system prompt and model."""
     return Agent(
         system_prompt=_load_prompt(),
         model=model,
@@ -28,4 +32,5 @@ def create_agent() -> Agent:
 
 
 def call_llm(prompt: str, agent: Agent) -> str:
+    """Call the LLM synchronously and return the output."""
     return agent.run_sync(prompt).output
