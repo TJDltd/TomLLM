@@ -1,7 +1,0 @@
-django
-fastapi
-google-genai
-pydantic
-pydantic-ai
-pytest
-ruff

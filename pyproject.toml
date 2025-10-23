@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tomllm"
+version = "0.1.0"
+description = "TomLLM project: Django + FastAPI LLM host"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django",
+    "fastapi",
+    "google-genai",
+    "pydantic",
+    "pydantic-ai",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools]
+# Keep packaging simple; add package-dir or packages if needed
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N", "D", "UP", "B", "C4", "SIM", "TID", "ARG", "PL", "RUF"]
+ignore = ["E501"]
+exclude = [
+    "__pycache__",
+    ".git",
+    ".venv",
+    "env",
+    "venv",
+    "migrations",
+]
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.uv]
+venv = { path = ".venv" }
+requirements = { location = "uv.lock" }
+python = "3.11"
+exclude = [
+    "__pycache__",
+    "*.pyc",
+    "*.pyo",
+    "*.pyd",
+    ".Python",
+    "build",
+    "dist"
+]
+
