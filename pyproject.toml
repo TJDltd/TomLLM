@@ -46,6 +46,26 @@ indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --tb=short"
+testpaths = [
+    "tomllm/api/tests",
+    "tomllm/web/tests",
+]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+markers = [
+    "integration: marks tests as integration tests",
+    "api: marks tests as API tests",
+    "web: marks tests as web tests",
+]
+
 [tool.uv]
 python-preference = "managed"
 
