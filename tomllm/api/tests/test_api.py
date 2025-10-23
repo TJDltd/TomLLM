@@ -10,12 +10,14 @@ from tomllm.api.models import InputQuery
 client = TestClient(app)
 VALID_RESPONSE_CODE = 200
 
+
 @pytest.fixture(scope="session")
 def llm_response() -> fastapi.Response:
     """Fixture for creating a sample InputQuery."""
     query = InputQuery(query="What is the capital of France?")
 
     return client.post("/query", json=query.model_dump())
+
 
 def test_query_response_code(llm_response: fastapi.Response):
     """Check the response code LLM response."""

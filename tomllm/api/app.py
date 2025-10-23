@@ -17,4 +17,5 @@ def query(input_query: InputQuery) -> str:
 def main() -> None:
     """Run the FastAPI application."""
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8001)
