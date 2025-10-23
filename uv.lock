@@ -330,9 +330,7 @@ types-requests==2.32.4.20250913
     # via cohere
 typing-extensions==4.15.0
     # via
-    #   aiosignal
     #   anthropic
-    #   anyio
     #   cohere
     #   fastapi
     #   google-genai
@@ -347,8 +345,6 @@ typing-extensions==4.15.0
     #   opentelemetry-semantic-conventions
     #   pydantic
     #   pydantic-core
-    #   referencing
-    #   starlette
     #   temporalio
     #   typing-inspection
 typing-inspection==0.4.2

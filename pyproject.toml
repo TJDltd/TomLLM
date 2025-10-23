@@ -46,23 +46,11 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.uv]
-venv = { path = ".venv" }
-requirements = { location = "uv.lock" }
-python = "3.13"
-exclude = [
-    "__pycache__",
-    "*.pyc",
-    "*.pyo",
-    "*.pyd",
-    ".Python",
-    "build",
-    "dist"
-]
+python-version = "3.13"
 
-[tool.hatch.scripts]
+[tool.uv.scripts]
 django = "python src/app/manage.py runserver"
 api = "uvicorn src.api:router --host 0.0.0.0 --port 8001 --reload"
 test = "pytest"
 format = "ruff format ."
 lint = "ruff check ."
-
