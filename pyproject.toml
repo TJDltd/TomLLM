@@ -14,6 +14,7 @@ dependencies = [
     "google-genai",
     "pydantic",
     "pydantic-ai",
+    "pydantic-settings",
 ]
 
 [project.optional-dependencies]
@@ -23,7 +24,7 @@ dev = [
 ]
 
 [tool.setuptools]
-# Keep packaging simple; add package-dir or packages if needed
+packages = ["tomllm"]
 
 [tool.ruff]
 line-length = 100
@@ -46,11 +47,8 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.uv]
-python-version = "3.13"
+python-preference = "managed"
 
-[tool.uv.scripts]
-django = "python src/app/manage.py runserver"
-api = "uvicorn src.api:router --host 0.0.0.0 --port 8001 --reload"
-test = "pytest"
-format = "ruff format ."
-lint = "ruff check ."
+[project.scripts]
+tomllm-web = "tomllm.web.manage:main"
+tomllm-api = "tomllm.api.app:main"
