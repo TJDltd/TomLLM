@@ -14,7 +14,7 @@ CV_FILE_PATH = BASE_DIR / "core" / "CV-22-05-2025.txt"
 
 model = GoogleModel(
     "gemini-2.0-flash",
-    provider=GoogleProvider(api_key=settings.GEMINI_API_KEY),
+    provider=GoogleProvider(api_key=settings.GOOGLE_API_KEY),
 )
 
 
