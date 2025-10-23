@@ -7,7 +7,7 @@ name = "tomllm"
 version = "0.1.0"
 description = "TomLLM project: Django + FastAPI LLM host"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "django",
     "fastapi",
@@ -37,7 +37,7 @@ exclude = [
     "venv",
     "migrations",
 ]
-target-version = "py311"
+target-version = "py313"
 
 [tool.ruff.format]
 quote-style = "double"
@@ -48,7 +48,7 @@ line-ending = "auto"
 [tool.uv]
 venv = { path = ".venv" }
 requirements = { location = "uv.lock" }
-python = "3.11"
+python = "3.13"
 exclude = [
     "__pycache__",
     "*.pyc",

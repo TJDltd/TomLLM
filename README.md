@@ -4,7 +4,7 @@ A Django web application with FastAPI backend for hosting a custom LLM project.
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.13+
 - [uv](https://github.com/astral-sh/uv) - Fast Python package installer and resolver
 
 ## Setup
