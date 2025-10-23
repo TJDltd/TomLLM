@@ -1,6 +1,5 @@
 """LLM integration for TomLLM."""
 
-import os
 from pathlib import Path
 
 from pydantic_ai import Agent
