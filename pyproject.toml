@@ -59,3 +59,10 @@ exclude = [
     "dist"
 ]
 
+[tool.hatch.scripts]
+django = "python src/app/manage.py runserver"
+api = "uvicorn src.api:router --host 0.0.0.0 --port 8001 --reload"
+test = "pytest"
+format = "ruff format ."
+lint = "ruff check ."
+
