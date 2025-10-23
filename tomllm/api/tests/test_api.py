@@ -8,6 +8,7 @@ from tomllm.api.app import app
 from tomllm.api.models import InputQuery
 
 client = TestClient(app)
+VALID_RESPONSE_CODE = 200
 
 @pytest.fixture(scope="session")
 def llm_response() -> fastapi.Response:
@@ -19,7 +20,7 @@ def llm_response() -> fastapi.Response:
 def test_query_response_code(llm_response: fastapi.Response):
     """Check the response code LLM response."""
     # Check if the response status code is 200 OK
-    assert llm_response.status_code == 200
+    assert llm_response.status_code == VALID_RESPONSE_CODE
 
 
 def test_query_response_text(llm_response: fastapi.Response):
